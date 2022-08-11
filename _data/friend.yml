@@ -1,0 +1,54 @@
+
+friend:
+  - 
+    id: catur
+    stat: dropright
+    name: Catur Satrio
+    img: "https://github.com/wong801.png"
+    link:
+      -
+        type: Github
+        icon: "bi-github"
+        link: "https://github.com/Wong801"
+      -
+        type: Telegram
+        icon: "bi-telegram"
+        link: "https://t.me/wong801"
+      -
+        type: Linkedin
+        icon: "bi-linkedin"
+        link: "https://www.linkedin.com/in/wong801/"
+  -
+    id: fadli
+    stat: dropup
+    name: Ahmad Zulfadli
+    img: "https://github.com/ahmadzulfadli.png"
+    link:
+      -
+        type: Github
+        icon: "bi-github"
+        link: "https://github.com/ahmadzulfadli"
+  - 
+    id: ammar
+    stat: dropup
+    name: Ammar Faizi
+    img: "https://github.com/ammarfaizi2.png"
+    link:
+      -
+        type: Github
+        icon: "bi-github"
+        link: "https://github.com/ammarfaizi2/"
+      -
+        type: Telegram
+        icon: "bi-telegram"
+        link: "https://t.me/ammarfaizi2"
+  - 
+    id: annas
+    stat: dropup
+    name: Annas Khoirunnas
+    img: "https://github.com/AnnasKhoirunnas.png"
+    link:
+      -
+        type: Github
+        icon: "bi-github"
+        link: "https://github.com/AnnasKhoirunnas/"
