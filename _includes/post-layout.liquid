@@ -1,0 +1,92 @@
+
+{% assign _content = include.content %}
+
+{% if _content contains '<table>' %}
+  {% assign _content = _content
+    | replace: '<table>', '<table class="table table-hover table-bordered">'
+    | replace: '</table></div></code>', '</table></code>'
+  %}
+{% endif %}
+
+{% if _content contains '<div class="mermaid">' %}
+  {% assign _content = _content | replace: '<div class="mermaid">', '<div class="mermaid text-center p-0 m-0">' %}
+{% endif %}
+
+{% if _content contains '<h1' %}
+  {% assign _content = _content | | replace: '<h1', '<h1 class="font-size-24 content-title border-bottom" ' %}
+{% endif %}
+
+{% if _content contains '<h2' %}
+  {% assign _content = _content | | replace: '<h2', '<h2 class="content-title border-bottom" ' %}
+{% endif %}
+
+{% if _content contains '<h3' %}
+  {% assign _content = _content | | replace: '<h3', '<h3 class="content-title border-bottom" ' %}
+{% endif %}
+
+{% if _content contains '<h4' %}
+  {% assign _content = _content | | replace: '<h4', '<h4 class="content-title border-bottom" ' %}
+{% endif %}
+
+{% if _content contains '<h5' %}
+  {% assign _content = _content | | replace: '<h5', '<h5 class="content-title border-bottom" ' %}
+{% endif %}
+
+{% if _content contains '<h6' %}
+  {% assign _content = _content | | replace: '<h6', '<h6 class="content-title border-bottom" ' %}
+{% endif %}
+
+{% if _content contains '<ul>' %}
+  {% assign _content = _content | | replace: '<ul>', '<ul class="ui list">' %}
+{% endif %}
+
+{% if _content contains '<pre class="highlight">' %}
+  {% capture winds %}
+  {% include button-fixed.html %}
+  <div class="highlight"><code 
+{% endcapture %}
+  {% assign _content = _content
+    | replace: '<div class="highlight"><pre class="highlight"><code', winds
+    | replace: '</code></pre></div>', '</code></div>'
+  %}
+{% endif %}
+
+
+{% if _content contains '<figure class="highlight">' %}
+    {% capture winds %}
+  {% include button-fixed.html %}
+<figure class="highlight">
+{% endcapture %}
+  {% assign _content = _content 
+  | replace: '<figure class="highlight">', winds
+    %}
+{% endif %}
+
+{% if _content contains '<li class="task-list-item"><' %}
+  {% assign _content = _content
+    | replace: '"task-list-item"><', '"task-list-item sidebar-link" hide-bullet><'
+  %}
+{% endif %}
+
+{% if _content contains '<ul><li>' %}
+  {% assign _content = _content
+    | replace: '<li>', '<li class="task-list-item">'
+  %}
+{% endif %}
+
+
+{% if _content contains '<img src="' %}
+
+  {% if site.img_cdn != '' %}
+    {% assign img_path_replacement = '<img src="' | append: site.img_cdn | append: '/' %}
+  {% else %}
+    {% assign img_path_replacement = '<img src="' | append: site.baseurl | append: '/' %}
+  {% endif %}
+
+  {% assign _content = _content | replace: '<img src="/', img_path_replacement %}
+
+  {% assign _content = _content | replace: '<img ', '<img class="img-fluid shadow-lg rounded mw-full"'  %}
+{% endif %}
+
+<!-- return -->
+{{ _content }}
