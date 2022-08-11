@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+{%- include head.liquid -%}
+
+<body class="dark-mode with-custom-webkit-scrollbars with-custom-css-scrollbars"  data-set-preferred-mode-onload="true" data-dm-shortcut-enabled="true" >
+    <div id="page-wrapper" class="page-wrapper">
+        <div class="content-wrapper bg-dark-dm">
+            <div class="container-fluid container-lg h-full">
+                <div class="row">
+                    <div class="col-xl-12">
+                        {% include navbar.liquid %}
+                        <div class="p-0 m-0 border-0 ">
+                            <div class="row">
+                                <!-- Help us grow section start -->
+                                <div class="col-lg-8 order-2">
+                                    {{ content }}
+                                </div>
+                                <!-- Help us grow section end -->
+                                {%- assign me = site.data.profile.my -%}
+                                {%- if me -%}
+                                <div class="col-lg-4 order-1">
+                                    {%- include profil.liquid -%}
+                                </div>
+                                {%- endif -%}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+</body>
+
+</html>
