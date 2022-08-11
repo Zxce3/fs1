@@ -1,3 +1,7 @@
+---
+layout: compress
+---
+
 <!DOCTYPE html>
 <html lang="en">
 {%- include head.liquid -%}
@@ -11,15 +15,17 @@
                         {% include navbar.liquid %}
                         <div class="p-0 m-0 border-0 ">
                             <div class="row">
-                                <!-- Help us grow section start -->
                                 <div class="col-lg-8 order-2">
                                     {{ content }}
                                 </div>
-                                <!-- Help us grow section end -->
                                 {%- assign me = site.data.profile.my -%}
                                 {%- if me -%}
                                 <div class="col-lg-4 order-1">
+                                    {%- if page.layout == 'home' or page.title == 'About' -%}
                                     {%- include profil.liquid -%}
+                                    {%- elsif page.layout == 'post' -%}
+                                    {%- include post-toc.liquid -%}
+                                    {%- endif -%}
                                 </div>
                                 {%- endif -%}
                             </div>
