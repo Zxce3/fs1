@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+{%- include head.liquid -%}
+
+<body class="dark-mode with-custom-webkit-scrollbars with-custom-css-scrollbars">
+    <div id="page-wrapper" class="page-wrapper">
+        <div class="content-wrapper">
+            <div class="container-fluid container-lg h-full">
+                <div class="row">
+                    <div class="col-xl-12">
+                        <div class="p-0">
+                            <div class="row">
+                                {%- assign me = site.data.profile.my -%}
+                                {%- if me -%}
+                                <!-- Help us grow section start -->
+                                <div class="col-lg-8 order-2">
+                                    <div class="content card border-0 m-0">
+                                        {%- for data in me.data -%}
+                                        <h2 class="content-title">{{ data.title }}</h2>
+                                        <p>{{ data.content }}</p>
+                                        {%- endfor -%}
+                                    </div>
+                                </div>
+                                <!-- Help us grow section end -->
+
+                                <!-- Subscriber form container start -->
+                                <div class="col-lg-4 order-1">
+                                    <div class="content card border-0 m-0 position-lg-sticky top-lg-0 left-lg-0 py-card my-0">
+                                        <img alt="Logo {{ me.alias }}" class="my-image rounded-circle"
+                                            src="https://github.com/zxce3.png">
+                                        <h1 class="text-center mb-0 font-weight-bolder">{{ me.alias }}</h1>
+                                        <p class="text-center m-0">{{ me.bio }}</p>
+                                        <hr class="border-bottom">
+                                        <div class="share text-center mt-15">
+                                            {% for share in me.social %}
+                                            {% assign link = share.link | replace: 'TITLE', title | replace: 'URL', url
+                                            %}
+                                            <a data-toggle="tooltip" data-placement="top" data-title="{{ share.type }}"
+                                                target="_blank" rel="noopener" aria-label="{{ share.type }}"
+                                                class="btn border btn-square  rounded-40" href="{{ link }}"><i
+                                                    class="bi {{ share.icon }}"></i></a>
+                                            {% endfor %}
+                                        </div>
+                                    </div>
+                                </div>
+                                {%- endif -%}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+</body>
+
+</html>

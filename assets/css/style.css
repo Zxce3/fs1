@@ -1,0 +1,18 @@
+body,
+code,
+html,
+kbd,
+pre,
+samp {
+    font-family: "Ubuntu", sans-serif;
+}
+
+.my-image {
+    display: block;
+    margin: auto;
+    pointer-events: none;
+    height: 20rem;
+    width: 20rem;
+    max-width: 100%;
+    max-height: 100%;
+}
