@@ -5,7 +5,7 @@ layout: default
 {%- assign me = site.data.profile.my -%}
 {%- if me -%}
 <div class="content card border-0 m-0">
-    {%- for data in me.data limit: 2 -%}
+    {%- for data in me.data limit: 1 -%}
     <h2 class="content-title">{{ data.title }}</h2>
     <p>{{ data.content }}</p>
     {%- endfor -%}
@@ -16,7 +16,7 @@ layout: default
     <h2 class="content-title">Notes</h2>
     <ul>
         {%- for p in site.posts -%}
-        <li><a href="{{ p.url | relative_url }}">{{ p.title }}</a></li>
+        <li><a class="nav-link font-size-18 border-bottom" href="{{ p.url | relative_url }}">[{{ p.date | date_to_string }}] {{ p.title }}</a></li>
         {%- endfor -%}
     </ul>
 </div>
