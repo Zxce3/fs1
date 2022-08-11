@@ -27,6 +27,16 @@ description: >- # this means to ignore newlines until "baseurl:"
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 
+permalink: pretty
+# Settings
+defaults:
+  - scope:
+      path: '_posts'
+      type: posts
+    values:
+      layout: post
+      permalink: /:categories/:title/
+
 plugins:
   - jekyll-feed
 
