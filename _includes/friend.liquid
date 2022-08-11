@@ -1,0 +1,19 @@
+<h2 class="content-title">Friend</h2>
+<p>I don't have many friends, and these are some of my friends both online and in real life, if you are not on the list and
+should be on this list please contact me.</p>
+{% assign dta = site.data.friend.friend %}
+{%- for buddy in dta  -%}
+<div class="dropdown {{ buddy.stat }} toggle-on-hover mr-5 border rounded-circle">
+    <a data-toggle="dropdown" id="{{ buddy.id }}" aria-haspopup="true" aria-expanded="false">
+        <img class="rounded-circle buddy-image" src="{{ buddy.img }}" alt="{{ buddy.name }}">
+    </a>
+    <div class="dropdown-menu dropdown-menu-center" aria-labelledby="{{buddy.id}}">
+        <h6 class="dropdown-header">{{buddy.name}}</h6>
+        <div class="dropdown-divider"></div>
+        {%- for uri in buddy.link -%}
+        <a href="{{ uri.link }}" class="dropdown-item">{{ uri.type }}</a>
+        {%- endfor -%}
+        <div class="dropdown-divider"></div>
+    </div>
+</div>
+{%- endfor -%}
