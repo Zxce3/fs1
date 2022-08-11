@@ -52,3 +52,24 @@ friend:
         type: Github
         icon: "bi-github"
         link: "https://github.com/AnnasKhoirunnas/"
+  -
+    id: jesen
+    stat: dropup
+    name: J
+    img: "https://github.com/crownss.png"
+    link:
+      -
+        type: Github
+        icon: "bi-github"
+        link: "https://github.com/crownss"
+  -
+    id: rlapz
+    stat: dropleft
+    name: Arthur Rlapz
+    img: "https://github.com/rlapz.png"
+    link:
+      -
+        type: Github
+        icon: "bi-github"
+        link: "https://github.com"
+        
