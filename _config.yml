@@ -21,11 +21,24 @@
 title: Zxce3
 email: zxce3@protonmail.com
 description: >- # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
+  I'm a developer based in Indonesia with around 3 years experience, 
+  and sometimes obsessed with the project I'm working on, 
+  I like to learn new things and try something different.
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://zxce3.net" # the base hostname & protocol for your site, e.g. http://example.com
+
+# seo option
+author:
+  name: zxce3
+  url: https://zxce3.net
+logo: https://github.com/zxce3.png
+social:
+  name: Zxce3
+  links:
+    - https://twitter.com/zxce3_
+    - https://www.facebook.com/mettzx
+    - https://www.linkedin.com/in/mettzx
+    - https://github.com/zxce3
 
 permalink: pretty
 # Settings
