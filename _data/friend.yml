@@ -72,4 +72,13 @@ friend:
         type: Github
         icon: "bi-github"
         link: "https://github.com"
-        
+  -
+    id: dayat
+    stat: dropleft
+    name: Taufik Hidayat
+    img: "https://github.com/lexiiz3417.png"
+    link:
+      - 
+        type: Github
+        icon: "bi-github"
+        link: "https://github.com/lexiiz3417"
