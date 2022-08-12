@@ -28,3 +28,40 @@ samp {
 ul li{
     list-style: none;
 }
+/* Code */
+.hljs {
+    background-color: rgba(0, 0, 0, 0.025);
+    border-color: rgba(0, 0, 0, 0.1);
+}
+
+.dark-mode .hljs {
+    background-color: #111417;
+    border-color: rgba(0, 0, 0, 0.1);
+}
+
+@media (min-width: 769px) {
+    .with-custom-css-scrollbars .hljs {
+        scrollbar-color: rgba(0, 0, 0, 0.25) #f7f7f7;
+    }
+
+    .dark-mode.with-custom-css-scrollbars .hljs {
+        scrollbar-color: rgba(255, 255, 255, 0.25) #111417;
+    }
+}
+.code-container,
+.dark-mode .code-container {
+    position: relative;
+}
+
+.code-container .copy-button,
+.dark-mode .code-container .copy-button {
+    position: absolute;
+    top: 0.5rem;
+    right: 0.5rem;
+    width: 8rem;
+    height: 2.4rem;
+    line-height: 2.4rem;
+    padding-top: 0;
+    padding-bottom: 0;
+    z-index: 5;
+}
