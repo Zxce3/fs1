@@ -74,7 +74,7 @@ friend:
         link: "https://github.com"
   -
     id: dayat
-    stat: left
+    stat: right
     name: Taufik Hidayat
     img: "https://github.com/lexiiz3417.png"
     link:
@@ -82,3 +82,23 @@ friend:
         type: Github
         icon: "bi-github"
         link: "https://github.com/lexiiz3417"
+  -
+    id: viro
+    stat: left
+    name: Alviro Iskandar S
+    img: "https://github.com/alviroiskandar.png"
+    link:
+      -
+        type: Github
+        icon: "bi-github"
+        link: "https://github.com/alviroiskandar"
+  -
+    id: kaname
+    stat:
+    name: kaname
+    img: "https://github.com/Sprtcrnbry.png"
+    link:
+      -
+        type: Github
+        icon: "bi-github"
+        link: "https://github.com/Sprtcrnbry"
