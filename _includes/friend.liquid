@@ -3,11 +3,11 @@
 should be on this list please contact me.</p>
 {% assign dta = site.data.friend.friend %}
 {%- for buddy in dta  -%}
-<div class="dropdown {{ buddy.stat }} toggle-on-hover mr-5 border rounded-circle">
+<div class="dropdown dropup with-arrow toggle-on-hover mr-5 border rounded-circle">
     <a data-toggle="dropdown" id="{{ buddy.id }}" aria-haspopup="true" aria-expanded="false">
         <img class="rounded-circle buddy-image" src="{{ buddy.img }}" alt="{{ buddy.name }}">
     </a>
-    <div class="dropdown-menu dropdown-menu-center" aria-labelledby="{{buddy.id}}">
+    <div class="dropdown-menu dropdown-menu-{{ buddy.stat }}" aria-labelledby="{{buddy.id}}">
         <h6 class="dropdown-header">{{buddy.name}}</h6>
         <div class="dropdown-divider"></div>
         {%- for uri in buddy.link -%}

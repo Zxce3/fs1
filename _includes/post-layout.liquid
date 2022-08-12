@@ -53,13 +53,6 @@
   %}
 {% endif %}
 
-{% if _content contains '<p><code class="language-plaintext highlighter-rouge">' %}
-  {% assign _content = _content
-    | replace: '<code class="language-plaintext highlighter-rouge">', '<kbd>'
-    | replace: '</code>', '</kbd>'
-    %}
-{% endif %}
-
 {% if _content contains '<div class="highlight">' %}
   {% capture winds %}
   <div class="code-container">

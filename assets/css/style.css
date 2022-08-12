@@ -65,3 +65,9 @@ ul li{
     padding-bottom: 0;
     z-index: 5;
 }
+ol ol,
+ol ul,
+ul ol,
+ul ul {
+    margin: 1.5rem 0px 1.5rem 1rem !important;
+}

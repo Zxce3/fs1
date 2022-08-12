@@ -2,7 +2,7 @@
 friend:
   - 
     id: catur
-    stat: dropright
+    stat: 
     name: Catur Satrio
     img: "https://github.com/wong801.png"
     link:
@@ -20,7 +20,7 @@ friend:
         link: "https://www.linkedin.com/in/wong801/"
   -
     id: fadli
-    stat: dropup
+    stat: 
     name: Ahmad Zulfadli
     img: "https://github.com/ahmadzulfadli.png"
     link:
@@ -30,7 +30,7 @@ friend:
         link: "https://github.com/ahmadzulfadli"
   - 
     id: ammar
-    stat: dropup
+    stat: 
     name: Ammar Faizi
     img: "https://github.com/ammarfaizi2.png"
     link:
@@ -44,7 +44,7 @@ friend:
         link: "https://t.me/ammarfaizi2"
   - 
     id: annas
-    stat: dropup
+    stat: 
     name: Annas Khoirunnas
     img: "https://github.com/AnnasKhoirunnas.png"
     link:
@@ -54,7 +54,7 @@ friend:
         link: "https://github.com/AnnasKhoirunnas/"
   -
     id: jesen
-    stat: dropup
+    stat: 
     name: J
     img: "https://github.com/crownss.png"
     link:
@@ -64,7 +64,7 @@ friend:
         link: "https://github.com/crownss"
   -
     id: rlapz
-    stat: dropleft
+    stat: right
     name: Arthur Rlapz
     img: "https://github.com/rlapz.png"
     link:
@@ -74,7 +74,7 @@ friend:
         link: "https://github.com"
   -
     id: dayat
-    stat: dropleft
+    stat: left
     name: Taufik Hidayat
     img: "https://github.com/lexiiz3417.png"
     link:
