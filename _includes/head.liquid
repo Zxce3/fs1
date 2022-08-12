@@ -19,9 +19,15 @@
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/halfmoon/css/halfmoon.min.css">
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
     <link rel="stylesheet" href="{{ 'assets/css/style.css' | relative_url }}">
+    <link rel="stylesheet" href="{{ 'assets/css/hljs.css' | relative_url }}">
     <!-- javascript -->
+    <script src="{{ 'assets/js/copy.js' | relative_url }}"></script>
     <script src="https://maling-it.github.io/assets/js/zxc.js"></script>
     <script>
         if (zxce3.getPreferredMode() == "light-mode") { } else if (zxce3.getPreferredMode() == "dark-mode") { } else if (zxce3.getPreferredMode() == "not-set") { }
     </script>
+    
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/highlight.min.js"></script>
+    
+    <script>hljs.initHighlightingOnLoad();</script>
 </head>
