@@ -40,25 +40,47 @@
   {% assign _content = _content | | replace: '<ul>', '<ul class="ui list">' %}
 {% endif %}
 
-{% if _content contains '<pre class="highlight">' %}
-  {% capture winds %}
-  {% include button-fixed.html %}
-  <div class="highlight"><code 
-{% endcapture %}
-  {% assign _content = _content
-    | replace: '<div class="highlight"><pre class="highlight"><code', winds
-    | replace: '</code></pre></div>', '</code></div>'
+{% if _content contains '<blockquote>' %}
+  {%- capture alert -%}
+  <div class="alert mt-20" role="alert">
+    <p class="alert-heading">
+      <i class="bi bi-quote mr-5 text-primary"></i>
+    </p>
+  {%- endcapture -%}
+{% assign _content = _content
+  | replace: '<blockquote>', alert
+  | replace: '</blockquote>', '</div>'
   %}
 {% endif %}
 
+{% if _content contains '<p><code class="language-plaintext highlighter-rouge">' %}
+  {% assign _content = _content
+    | replace: '<code class="language-plaintext highlighter-rouge">', '<kbd>'
+    | replace: '</code>', '</kbd>'
+    %}
+{% endif %}
 
-{% if _content contains '<figure class="highlight">' %}
-    {% capture winds %}
-  {% include button-fixed.html %}
-<figure class="highlight">
+{% if _content contains '<div class="highlight">' %}
+  {% capture winds %}
+  <div class="code-container">
+    {% include copy.liquid %}
+    <div class="highlight">
+      {% endcapture %}
+      {% assign _content = _content
+      | replace: '<div class="highlight">', winds
+      | replace: '</pre></div>', '</pre></div></div>'
+  %}
+  {% endif %}
+
+{% if _content contains '<figure class="highlight">' %}  
+{% capture winds %}
+  <div class="code-container">
+  {% include copy.liquid %}
+  <div class="highlight">
 {% endcapture %}
   {% assign _content = _content 
   | replace: '<figure class="highlight">', winds
+  | replace: '</pre></figure>', '</pre></div></div>'
     %}
 {% endif %}
 
