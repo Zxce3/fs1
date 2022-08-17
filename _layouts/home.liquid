@@ -20,3 +20,31 @@ layout: default
         {%- endfor -%}
     </ul>
 </div>
+<div class="content card m-0 border-0">
+    <h2 class="content-title">Blogger Post <span><a href="https://blog.zxce3.net/">#</a></span></h2>
+    <ul>
+    <script type="text/javascript">
+  function postcallback(json) {
+    for (var i = 0; i < json.feed.entry.length; i++) {
+      for (var j = 0; j < json.feed.entry[i].link.length; j++) {
+        if (json.feed.entry[i].link[j].rel == 'alternate') {
+          var postUrl = json.feed.entry[i].link[j].href;
+          break;
+        }
+      }
+
+      var postTitle = json.feed.entry[i].title.$t;
+      var postAuthor = json.feed.entry[i].author[0].name.$t;
+      var postSummary = json.feed.entry[i].summary.$t;
+      var postCat = json.feed.entry[i].category[0].term;
+      var postDate = json.feed.entry[i].published.$t;
+      var entryShort = postSummary.substring(0, 90);
+      var entryEnd = entryShort.lastIndexOf(" ");
+      var postContent = entryShort.substring(0, entryEnd) + '...';
+      var item = '<li><a class="nav-link font-size-18 border-bottom" href=' + postUrl + '>' + '[' + postCat + '] ' + postTitle + '</a></li>';
+      document.write(item);
+    }
+  }
+</script>
+<script src="http://blog.zxce3.net/feeds/posts/summary?orderby=published&max-results=10&alt=json-in-script&callback=postcallback"></script>    </ul>
+</div>
