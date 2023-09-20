@@ -1,11 +1,13 @@
-<html><head>
+<!DOCTYPE html>
+<html>
+<head>
     <title>Zxce3</title>
-    <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
-    <meta content="utf-8" http-equiv="encoding">
-    <!-- <link rel="stylesheet" type="text/css" href="style.css" /> -->
-    <!-- For whatever reason, the .css file was being loaded as an octet-stream in firefox, so I declare this deterministically -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
     <style>
         * {
+            box-sizing: border-box;
             font-family: 'Courier New', monospace;
         }
         
@@ -18,7 +20,7 @@
         
         a {
             color: white;
-            text-decoration: none;
+            text-decoration: none !important;
             line-height: 20px;
         }
         
@@ -28,42 +30,61 @@
             text-decoration: underline;
         }
     
-        div {
-            width: auto;
-            height: auto;
-            float: left;
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
             padding: 10px;
-            border: 1px solid white;
-            margin: 50px;
-            position: absolute;
-            left: 0;
-            right: 0;
         }
     
-        .logo,
-        .logo:hover,
-        .logo:active {
+        .logo {
+            display: block;
+            margin: 0 auto;
             line-height: 10px;
             text-decoration: none;
         }
+    
+        .links {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            margin-top: 50px;
+        }
+    
+        .link {
+            padding: 10px;
+            border: 1px solid white;
+            margin: 10px;
+            text-align: center;
+            flex-basis: 200px;
+        }
     </style>
-    </head>
-    <body>
-    <pre><center><a href="index.html" class="logo"> .----------------.  .----------------.  .----------------.  .----------------.  .----------------. 
-    | .--------------. || .--------------. || .--------------. || .--------------. || .--------------. |
-    | |   ________   | || |  ____  ____  | || |     ______   | || |  _________   | || |    ______    | |
-    | |  |  __   _|  | || | |_  _||_  _| | || |   .' ___  |  | || | |_   ___  |  | || |   / ____ `.  | |
-    | |  |_/  / /    | || |   \ \  / /   | || |  / .'   \_|  | || |   | |_  \_|  | || |   `'  __) |  | |
-    | |     .'.' _   | || |    &gt; `' &lt;    | || |  | |         | || |   |  _|  _   | || |   _  |__ '.  | |
-    | |   _/ /__/ |  | || |  _/ /'`\ \_  | || |  \ `.___.'\  | || |  _| |___/ |  | || |  | \____) |  | |
-    | |  |________|  | || | |____||____| | || |   `._____.'  | || | |_________|  | || |   \______.'  | |
-    | |              | || |              | || |              | || |              | || |              | |
-    | '--------------' || '--------------' || '--------------' || '--------------' || '--------------' |
-     '----------------'  '----------------'  '----------------'  '----------------'  '----------------' </a></center></pre>
-    <div>
-        <a href="gitlab.com/zxce3">gitlab</a><br>
-        <a href="maling-it.github.io/">MalingIT</a><br>
+</head>
+<body>
+    <div class="container">
+        <a style="text-decoration: none !important;" href="index.html" class="logo"> 
+            <pre>
+                .----------------.  .----------------.  .----------------.  .----------------.  .----------------. 
+                | .--------------. || .--------------. || .--------------. || .--------------. || .--------------. |
+                | |   ________   | || |  ____  ____  | || |     ______   | || |  _________   | || |    ______    | |
+                | |  |  __   _|  | || | |_  _||_  _| | || |   .' ___  |  | || | |_   ___  |  | || |   / ____ `.  | |
+                | |  |_/  / /    | || |   \ \  / /   | || |  / .'   \_|  | || |   | |_  \_|  | || |   `'  __) |  | |
+                | |     .'.' _   | || |    &gt; `' &lt;    | || |  | |         | || |   |  _|  _   | || |   _  |__ '.  | |
+                | |   _/ /__/ |  | || |  _/ /'`\ \_  | || |  \ `.___.'\  | || |  _| |___/ |  | || |  | \____) |  | |
+                | |  |________|  | || | |____||____| | || |   `._____.'  | || | |_________|  | || |   \______.'  | |
+                | |              | || |              | || |              | || |              | || |              | |
+                | '--------------' || '--------------' || '--------------' || '--------------' || '--------------' |
+                '----------------'  '----------------'  '----------------'  '----------------'  '----------------' 
+            </pre>
+        </a>
+        <div class="links">
+            <a href="https://gitlab.com/zxce3" class="link">gitlab</a>
+            <a href="https://maling-it.github.io/" class="link">MalingIT</a>
+            <a href="http://t.me/zxce3" class="link">Telegram Contact</a>
+        </div>
     </div>
-    
-    
-    </body></html>
+</body>
+</html>
